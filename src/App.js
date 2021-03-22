@@ -5,10 +5,9 @@ import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   typography: {
-    fontFamily: [
-      'Monospace',
-    ].join(','),
-},});
+    fontFamily: [ 'Monospace' ]
+  },
+})
 
 function App() {
   return (
