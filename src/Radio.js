@@ -120,7 +120,7 @@ export default function Radio() {
 
     return (
         <div>
-            <video id='background-video' autoPlay key={currentVideo.videoID} onEnded={() => {updateSong()}}>
+            <video src='/videos/Metal-Armor-Dragonar-Opening-1.mp4' id='background-video' autoPlay key={currentVideo.videoID} onEnded={() => {updateSong()}}>
                 <source src={videoList[currentVideo.videoID].src} type='video/mp4' />
                 Your browser does not support this video format.
             </video>

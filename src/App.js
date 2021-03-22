@@ -14,7 +14,6 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Logo />
-      <Radio />
     </ThemeProvider>
   )
 }
