@@ -120,20 +120,20 @@ export default function Radio() {
 
     return (
         <div>
-            <video src='/videos/Metal-Armor-Dragonar-Opening-1.mp4' id='background-video' autoPlay key={currentVideo.videoID} onEnded={() => {updateSong()}}>
+            <video id='background-video' autoPlay key={currentVideo.videoID} onEnded={() => {updateSong()}}>
                 <source src={videoList[currentVideo.videoID].src} type='video/mp4' />
                 Your browser does not support this video format.
             </video>
 
             <div id="radio-controls">
-                <Grid container item xs={2} alignItems="center">  
+                <Grid container item xs={8} md={4} xl={2} alignItems="center">  
                     <Marquee gradient={false}>
                         <Typography>
                             Now Playing: {currentVideo.songName}
                         </Typography>
                     </Marquee>
                 </Grid>
-                <Grid container item xs={2} alignItems="center">
+                <Grid container item xs={8} md={4} xl={2} alignItems="center">
                     <Grid item xs={1}>
                         <VolumeDown onClick={() => {changeVolume(undefined, 0)}} />
                     </Grid>
