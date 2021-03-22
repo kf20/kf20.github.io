@@ -126,14 +126,14 @@ export default function Radio() {
             </video>
 
             <div id="radio-controls">
-                <Grid container item xs={2} alignItems="center">  
+                <Grid container item xs={4} md={2} alignItems="center">  
                     <Marquee gradient={false}>
                         <Typography>
                             Now Playing: {currentVideo.songName}
                         </Typography>
                     </Marquee>
                 </Grid>
-                <Grid container item xs={2} alignItems="center">
+                <Grid container item xs={4} md={2} alignItems="center">
                     <Grid item xs={1}>
                         <VolumeDown onClick={() => {changeVolume(undefined, 0)}} />
                     </Grid>
