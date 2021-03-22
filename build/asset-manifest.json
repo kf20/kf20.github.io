@@ -1,31 +1,20 @@
 {
   "files": {
     "main.css": "/static/css/main.1df69f4b.chunk.css",
-    "main.js": "/static/js/main.fa12566c.chunk.js",
-    "main.js.map": "/static/js/main.fa12566c.chunk.js.map",
+    "main.js": "/static/js/main.a0972e2c.chunk.js",
+    "main.js.map": "/static/js/main.a0972e2c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.53efe866.js",
     "runtime-main.js.map": "/static/js/runtime-main.53efe866.js.map",
     "static/js/2.30ab8214.chunk.js": "/static/js/2.30ab8214.chunk.js",
     "static/js/2.30ab8214.chunk.js.map": "/static/js/2.30ab8214.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.1df69f4b.chunk.css.map": "/static/css/main.1df69f4b.chunk.css.map",
-    "static/js/2.30ab8214.chunk.js.LICENSE.txt": "/static/js/2.30ab8214.chunk.js.LICENSE.txt",
-    "static/media/Aku-Daisakusen-Slangle-Late-FIGHTING-ON.1094debc.mp4": "/static/media/Aku-Daisakusen-Slangle-Late-FIGHTING-ON.1094debc.mp4",
-    "static/media/Aura-Battler-Dunbine-OP.7e6cb5d3.mp4": "/static/media/Aura-Battler-Dunbine-OP.7e6cb5d3.mp4",
-    "static/media/Bubblegum-Crisis-Konya-Wa-Hurricane.2a3ea084.mp4": "/static/media/Bubblegum-Crisis-Konya-Wa-Hurricane.2a3ea084.mp4",
-    "static/media/Choujuu-Kishin-Dancouga-Ai-yo-Far-Away.b0d751b6.mp4": "/static/media/Choujuu-Kishin-Dancouga-Ai-yo-Far-Away.b0d751b6.mp4",
-    "static/media/Fly-Gundam.48982031.mp4": "/static/media/Fly-Gundam.48982031.mp4",
-    "static/media/Just-Communication.b309a577.mp4": "/static/media/Just-Communication.b309a577.mp4",
-    "static/media/MD-Geist-Violence-of-the-Flame.6de026c2.mp4": "/static/media/MD-Geist-Violence-of-the-Flame.6de026c2.mp4",
-    "static/media/Metal-Armor-Dragonar-Opening-1.bb088101.mp4": "/static/media/Metal-Armor-Dragonar-Opening-1.bb088101.mp4",
-    "static/media/Mobile-Police-Patlabor-(Early-Days)-Opening-Remastered.2ca560a7.mp4": "/static/media/Mobile-Police-Patlabor-(Early-Days)-Opening-Remastered.2ca560a7.mp4",
-    "static/media/Trider-G7-Opening.f37fe40d.mp4": "/static/media/Trider-G7-Opening.f37fe40d.mp4",
-    "static/media/Yellow-Dancer-(Lancer)-Look-Up-the-Sky-is-Falling.2abc7825.mp4": "/static/media/Yellow-Dancer-(Lancer)-Look-Up-the-Sky-is-Falling.2abc7825.mp4"
+    "static/js/2.30ab8214.chunk.js.LICENSE.txt": "/static/js/2.30ab8214.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.53efe866.js",
     "static/js/2.30ab8214.chunk.js",
     "static/css/main.1df69f4b.chunk.css",
-    "static/js/main.fa12566c.chunk.js"
+    "static/js/main.a0972e2c.chunk.js"
   ]
 }

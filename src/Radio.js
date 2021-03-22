@@ -3,30 +3,18 @@ import {Typography, Slider, Grid} from '@material-ui/core'
 import {VolumeDown, VolumeUp} from '@material-ui/icons'
 import Marquee from "react-fast-marquee";
 
-import video0 from './videos/Just-Communication.mp4'
-import video1 from './videos/Fly-Gundam.mp4'
-import video2 from './videos/Bubblegum-Crisis-Konya-Wa-Hurricane.mp4'
-import video3 from './videos/MD-Geist-Violence-of-the-Flame.mp4'
-import video4 from './videos/Yellow-Dancer-(Lancer)-Look-Up-the-Sky-is-Falling.mp4'
-import video5 from './videos/Choujuu-Kishin-Dancouga-Ai-yo-Far-Away.mp4'
-import video6 from './videos/Mobile-Police-Patlabor-(Early-Days)-Opening-Remastered.mp4'
-import video7 from './videos/Trider-G7-Opening.mp4'
-import video8 from './videos/Aku-Daisakusen-Slangle-Late-FIGHTING-ON.mp4'
-import video9 from './videos/Aura-Battler-Dunbine-OP.mp4'
-import video10 from './videos/Metal-Armor-Dragonar-Opening-1.mp4'
-
 const videoList = [
-    {'src':video0, 'duration':260, 'name':'Mobile Suit Gundam Wing - Just Communication   '},
-    {'src':video1, 'duration':89, 'name':'Mobile Suit Gundam - Fly! Gundam!   '},
-    {'src':video2, 'duration':291, 'name':'Bubblegum Crisis - Konya Wa Hurricane   '},
-    {'src':video3, 'duration':240, 'name':'M.D. Geist - Violence of the Flame   '},
-    {'src':video4, 'duration':285, 'name':'Yellow Dancer (Lancer) - Look Up the Sky is Falling   '},
-    {'src':video5, 'duration':246, 'name':'Choujuu Kishin - Dancouga Ai yo Far Away   '},
-    {'src':video6, 'duration':90, 'name':'Mobile Police Patlabor (Early Days) - Opening (Remastered)   '},
-    {'src':video7, 'duration':86, 'name':'Trider G7 - Opening   '},
-    {'src':video8, 'duration':80, 'name':'Aku Daisakusen Slangle Late - FIGHTING ON   '},
-    {'src':video9, 'duration':91, 'name':'Aura Battler Dunbine - Opening   '},
-    {'src':video10, 'duration':90, 'name':'Metal Armor Dragonar - Opening 1   '},
+    {'src':'/videos/Just-Communication.mp4', 'duration':260, 'name':'Mobile Suit Gundam Wing - Just Communication   '},
+    {'src':'/videos/Fly-Gundam.mp4', 'duration':89, 'name':'Mobile Suit Gundam - Fly! Gundam!   '},
+    {'src':'/videos/Bubblegum-Crisis-Konya-Wa-Hurricane.mp4', 'duration':291, 'name':'Bubblegum Crisis - Konya Wa Hurricane   '},
+    {'src':'/videos/MD-Geist-Violence-of-the-Flame.mp4', 'duration':240, 'name':'M.D. Geist - Violence of the Flame   '},
+    {'src':'/videos/Yellow-Dancer-(Lancer)-Look-Up-the-Sky-is-Falling.mp4', 'duration':285, 'name':'Yellow Dancer (Lancer) - Look Up the Sky is Falling   '},
+    {'src':'/videos/Choujuu-Kishin-Dancouga-Ai-yo-Far-Away.mp4', 'duration':246, 'name':'Choujuu Kishin - Dancouga Ai yo Far Away   '},
+    {'src':'/videos/Mobile-Police-Patlabor-(Early-Days)-Opening-Remastered.mp4', 'duration':90, 'name':'Mobile Police Patlabor (Early Days) - Opening (Remastered)   '},
+    {'src':'/videos/Trider-G7-Opening.mp4', 'duration':86, 'name':'Trider G7 - Opening   '},
+    {'src':'/videos/Aku-Daisakusen-Slangle-Late-FIGHTING-ON.mp4', 'duration':80, 'name':'Aku Daisakusen Slangle Late - FIGHTING ON   '},
+    {'src':'/videos/Aura-Battler-Dunbine-OP.mp4', 'duration':91, 'name':'Aura Battler Dunbine - Opening   '},
+    {'src':'/videos/Metal-Armor-Dragonar-Opening-1.mp4', 'duration':90, 'name':'Metal Armor Dragonar - Opening 1   '},
 ]
 
 var radioCycle = 1
