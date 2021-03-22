@@ -7,7 +7,6 @@ export default function Logo() {
             <Typography variant="h4">
                 Tokemak.radio
             </Typography>
-            <video autoPlay src="\videos\Bubblegum-Crisis-Konya-Wa-Hurricane.mp4"></video>
         </div>
     )
 }
