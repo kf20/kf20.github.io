@@ -1,13 +1,13 @@
-import React from 'react'
-import Radio from './Radio'
-import Logo from './Logo'
+import React from 'react';
+import Radio from './Radio';
+import Logo from './Logo';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   typography: {
-    fontFamily: [ 'Monospace' ]
+    fontFamily: ['Monospace'],
   },
-})
+});
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Logo />
       <Radio />
     </ThemeProvider>
-  )
+  );
 }
 
 export default App;
