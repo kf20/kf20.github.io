@@ -241,7 +241,6 @@ export default function Radio() {
         <source
           id='audio-source'
           src={`/songs/${SONG_LIST[0].name}.mp3`}
-          type='audio/mpeg'
         ></source>
       </audio>
 
