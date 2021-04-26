@@ -1,0 +1,2 @@
+body{background-color:#000;overflow-y:hidden}#logo{z-index:1;position:fixed;top:2%;left:2%;color:#fff;font-family:monospace}#video-player{z-index:-1;height:100%;object-fit:fill;float:left;top:0;left:0;padding:none}#main-grid,#video-player{width:100%;position:fixed}#main-grid{z-index:1;left:2%;bottom:2%;color:#fff}
+/*# sourceMappingURL=main.76e1a4a4.chunk.css.map */
