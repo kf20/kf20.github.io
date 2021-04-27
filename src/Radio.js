@@ -42,6 +42,7 @@ const VIDEO_LIST = [
   { name: 'machine-34', duration: 20 },
   { name: 'machine-35', duration: 22 },
   { name: 'machine-36', duration: 29 },
+  { name: 'machine-37', duration: 15 },
 ];
 
 const SONG_LIST = [
