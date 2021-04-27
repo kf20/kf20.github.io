@@ -5,24 +5,24 @@ import Marquee from 'react-fast-marquee';
 
 const VIDEO_LIST = [
   { name: 'machine-1', duration: 18 },
-  { name: 'machine-2', duration: 12 },
-  { name: 'machine-3', duration: 29 },
+  { name: 'machine-2', duration: 3 },
+  { name: 'machine-3', duration: 7 },
   { name: 'machine-4', duration: 25 },
   { name: 'machine-5', duration: 20 },
-  { name: 'machine-6', duration: 32 },
-  { name: 'machine-7', duration: 31 },
+  { name: 'machine-6', duration: 4 },
+  { name: 'machine-7', duration: 3 },
   { name: 'machine-8', duration: 6 },
   { name: 'machine-9', duration: 9 },
-  { name: 'machine-10', duration: 36 },
-  { name: 'machine-11', duration: 16 },
-  { name: 'machine-12', duration: 18 },
-  { name: 'machine-13', duration: 34 },
-  { name: 'machine-14', duration: 12 },
-  { name: 'machine-15', duration: 25 },
+  { name: 'machine-10', duration: 3 },
+  { name: 'machine-11', duration: 2 },
+  { name: 'machine-12', duration: 0 },
+  { name: 'machine-13', duration: 4 },
+  { name: 'machine-14', duration: 4 },
+  { name: 'machine-15', duration: 12 },
   { name: 'machine-16', duration: 28 },
   { name: 'machine-17', duration: 20 },
   { name: 'machine-18', duration: 13 },
-  { name: 'machine-19', duration: 24 },
+  { name: 'machine-19', duration: 3 },
   { name: 'machine-20', duration: 71 },
   { name: 'machine-21', duration: 28 },
   { name: 'machine-22', duration: 13 },
@@ -35,14 +35,14 @@ const VIDEO_LIST = [
   { name: 'machine-29', duration: 12 },
   { name: 'machine-30', duration: 27 },
   { name: 'machine-31', duration: 25 },
-  { name: 'machine-32', duration: 22 },
+  { name: 'machine-32', duration: 4 },
   { name: 'machine-33', duration: 32 },
-  { name: 'gun-34', duration: 18 },
-  { name: 'gun-35', duration: 23 },
+  { name: 'gun-34', duration: 4 },
+  { name: 'gun-35', duration: 4 },
   { name: 'machine-34', duration: 20 },
-  { name: 'machine-35', duration: 22 },
-  { name: 'machine-36', duration: 29 },
-  { name: 'machine-37', duration: 15 },
+  { name: 'machine-35', duration: 2 },
+  { name: 'machine-36', duration: 3 },
+  { name: 'machine-37', duration: 1 },
 ];
 
 const SONG_LIST = [
@@ -239,10 +239,7 @@ export default function Radio() {
       </video>
 
       <audio id='audio-player' autoPlay onEnded={() => nextSong()}>
-        <source
-          id='audio-source'
-          src={`/songs/${SONG_LIST[0].name}.mp3`}
-        ></source>
+        <source id='audio-source' src={`/songs/${SONG_LIST[0].name}.mp3`}></source>
       </audio>
 
       <Grid id='main-grid' container item xs={7} direction='column'>
