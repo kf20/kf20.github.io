@@ -114,7 +114,7 @@ function shuffleArray(array, seed) {
 }
 
 export default function Radio() {
-  const [volume, setVolume] = useState(0);
+  const [volume, setVolume] = useState(50);
   const [song_name, setSongName] = useState('');
 
   function changeVolume(_, value) {
