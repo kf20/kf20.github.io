@@ -3,6 +3,15 @@ body {
   overflow-y: hidden;
 }
 
+.clickable-button {
+  color: white;
+}
+
+.clickable-button:hover {
+  cursor: pointer;
+  color: rgb(180, 180, 180);
+}
+
 #logo {
   z-index: 1;
   position: fixed;
@@ -12,8 +21,13 @@ body {
   font-family: monospace;
 }
 
+#now-playing-text {
+  font-size: 130%;
+}
+
 #video-player {
   z-index: -1;
+
   height: 100%;
   width: 100%;
   object-fit: fill;
@@ -22,6 +36,8 @@ body {
   left: 0;
   padding: none;
   position: fixed;
+
+  opacity: 20%;
 }
 
 #main-grid {
@@ -30,5 +46,15 @@ body {
   left: 2%;
   bottom: 2%;
   width: 100%;
+
   color: white;
+}
+
+#play-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.4);
 }

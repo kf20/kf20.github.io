@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Typography, Slider, Grid } from '@material-ui/core';
 import { VolumeDown, VolumeUp } from '@material-ui/icons';
+import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import Marquee from 'react-fast-marquee';
 
 const VIDEO_LIST = [
@@ -116,8 +117,13 @@ function shuffleArray(array, seed) {
 export default function Radio() {
   const [volume, setVolume] = useState(50);
   const [song_name, setSongName] = useState('');
+  const [is_audio_started, setAudioState] = useState(false);
 
   function changeVolume(_, value) {
+    if (!is_audio_started) {
+      setAudioState(true);
+      nextSong();
+    }
     setVolume(value);
   }
 
@@ -162,7 +168,7 @@ export default function Radio() {
     //target_video_position is how far along in the video_queue we should be (in seconds), based off of unix time
     //iterate through each video in the queue until we reach the correct one
     target_video_position = time % total_video_duration;
-    for (let i = 0; i < video_queue.length; i++) {
+    for (let i = 0; i < VIDEO_LIST.length; i++) {
       let video = VIDEO_LIST[video_queue[0]];
       if (target_video_position < video.duration) {
         break;
@@ -183,6 +189,7 @@ export default function Radio() {
     target_song_position = 0;
 
     audioPlayer.volume = volume / 100;
+
     audioPlayer.load();
 
     setSongName(SONG_LIST[_id].name);
@@ -206,7 +213,7 @@ export default function Radio() {
     shuffleArray(song_queue, song_cycle);
 
     target_song_position = time % total_song_duration;
-    for (let i = 0; i < song_queue.length; i++) {
+    for (let i = 0; i < SONG_LIST.length; i++) {
       let song = SONG_LIST[song_queue[0]];
       if (target_song_position < song.duration) break;
 
@@ -216,15 +223,27 @@ export default function Radio() {
   }
 
   useEffect(() => {
-    //when volume is changed, set the new volume
+    //when volume is changed
+    //set the new volume
     let audioObject = document.getElementById('audio-player');
     audioObject.volume = volume / 100;
   }, [volume]);
 
   useEffect(() => {
+    //when the audio is started
+    if (is_audio_started) {
+      //remove the play button
+      let playButton = document.getElementById('play-button');
+      playButton.style.display = 'none';
+      //increase the opacity of the video
+      let videoPlayer = document.getElementById('video-player');
+      videoPlayer.style.opacity = 100;
+    }
+  }, [is_audio_started]);
+
+  useEffect(() => {
     //on page load
     nextVideo();
-    nextSong();
   }, []);
 
   return (
@@ -239,27 +258,35 @@ export default function Radio() {
       </video>
 
       <audio id='audio-player' autoPlay onEnded={() => nextSong()}>
-        <source id='audio-source' src={`/songs/${SONG_LIST[0].name}.mp3`}></source>
+        <source id='audio-source' src=''></source>
       </audio>
 
       <Grid id='main-grid' container item xs={7} direction='column'>
         <Grid item xs={12} md={6} xl={4}>
           <Marquee gradient={false}>
-            <Typography noWrap>Now Playing: {song_name}     </Typography>
+            <Typography id='now-playing-text' noWrap>
+              Now Playing: {song_name}     
+            </Typography>
           </Marquee>
         </Grid>
         <Grid container item xs={12} md={6} xl={4} alignItems='center'>
           <Grid item xs={1}>
-            <VolumeDown onClick={() => changeVolume(undefined, 0)} />
+            <VolumeDown className='clickable-button' onClick={() => changeVolume(undefined, 0)} />
           </Grid>
           <Grid item xs={10}>
             <Slider value={volume} onChange={changeVolume} />
           </Grid>
           <Grid item xs={1}>
-            <VolumeUp onClick={() => changeVolume(undefined, 100)} />
+            <VolumeUp className='clickable-button' onClick={() => changeVolume(undefined, 100)} />
           </Grid>
         </Grid>
       </Grid>
+
+      <PlayCircleOutlineIcon
+        id='play-button'
+        className='clickable-button'
+        onClick={() => changeVolume(undefined, volume)}
+      ></PlayCircleOutlineIcon>
     </>
   );
 }
