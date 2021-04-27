@@ -134,11 +134,13 @@ export default function Radio() {
     //set the video source as the new video
     videoSource.setAttribute('src', `/videos/${VIDEO_LIST[_id].name}.webm`);
 
+    //set the video to the correct time
     videoPlayer.currentTime = target_video_position;
     target_video_position = 0;
 
     //set the volume
     videoPlayer.volume = volume / 100;
+
     videoPlayer.load();
   }
 
@@ -180,6 +182,7 @@ export default function Radio() {
   }
 
   function setSong(_id) {
+    //same as setVideo, but with the song
     let audioPlayer = document.getElementById('audio-player');
     let audioSource = document.getElementById('audio-source');
 
@@ -196,6 +199,7 @@ export default function Radio() {
   }
 
   function nextSong() {
+    //same as nextVideo, but with the song
     if (song_queue.length !== 0) {
       setSong(song_queue[0]);
       song_queue.shift();
@@ -206,6 +210,7 @@ export default function Radio() {
   }
 
   function syncSongQueue() {
+    //same as syncVideoQueue, but with the song
     let time = Math.floor(Date.now() / 1000);
 
     let song_cycle = Math.floor(time / total_song_duration);
